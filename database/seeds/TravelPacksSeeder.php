@@ -18,6 +18,8 @@ class TravelPacksSeeder extends Seeder
             $new_pack->destination = $faker->city() . " " . $faker->state();
             $new_pack->description = $faker->paragraph();
             $new_pack->destination = $faker->randomFloat(2);
+
+            $new_pack->save();
         }
     }
 }
