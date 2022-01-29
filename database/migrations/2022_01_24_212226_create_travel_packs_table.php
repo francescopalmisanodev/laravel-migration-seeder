@@ -17,7 +17,7 @@ class CreateTravelPacksTable extends Migration
             $table->id();
             $table->string("destinations", 100);
             $table->text("description");
-            $table->string("price");
+            $table->float("price", 9, 2);
             $table->timestamps();
         });
     }

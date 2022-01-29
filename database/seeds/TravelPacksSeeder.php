@@ -15,9 +15,9 @@ class TravelPacksSeeder extends Seeder
     {
         for ($i = 0; $i < 20; $i++) {
             $new_pack = new TravelPack;
-            $new_pack->destination = $faker->city() . " " . $faker->state();
+            $new_pack->destinations = $faker->city();
             $new_pack->description = $faker->paragraph();
-            $new_pack->destination = $faker->randomFloat(2);
+            $new_pack->price = $faker->randomFloat(2, 0, 9999999);
 
             $new_pack->save();
         }
